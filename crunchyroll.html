@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement - Compte Crunchyroll</title>
+  <link rel="stylesheet" href="style.css"> <!-- Assure-toi que le lien vers le fichier CSS est correct -->
+</head>
+<body>
+  <div class="container">
+    <main class="purchase-page">
+      <div class="product-info">
+        <img src="https://via.placeholder.com/300x200?text=Crunchyroll+Account" alt="Crunchyroll Account">
+        <h1>Compte Crunchyroll</h1>
+        <p>Produit vendu <span class="product-sold">20</span> fois.</p>
+        <ul>
+          <li>⚡ Livraison instantanée</li>
+          <li>🔄 Compte ne fonctionnant pas ? = Je vérifie et vous fournis un autre</li>
+          <li>Détails du produit ici</li>
+        </ul>
+      </div>
+
+      <div class="purchase-form">
+        <h2>€1.00</h2>
+        <p><span id="available">20</span> disponible</p>
+        <form>
+          <label for="quantity">Quantité</label>
+          <div class="quantity-selector">
+            <button type="button" onclick="changeQuantity(-1)">-</button>
+            <input id="quantity" type="number" value="1" min="1">
+            <button type="button" onclick="changeQuantity(1)">+</button>
+          </div>
+          <label for="email">Adresse E-mail</label>
+          <input id="email" type="email" placeholder="nom@domaine.com" required>
+          <label for="payment-method">Méthode de paiement</label>
+          <select id="payment-method">
+            <option>Paypal F&F</option>
+            <option>Carte de Crédit</option>
+          </select>
+          <p>Votre commande</p>
+          <p>Prix total : €<span id="total">1.00</span></p>
+          <button type="submit">Acheter</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function changeQuantity(change) {
+      const quantityInput = document.getElementById('quantity');
+      let quantity = parseInt(quantityInput.value) + change;
+      const available = parseInt(document.getElementById('available').textContent);
+      if (quantity < 1) quantity = 1;
+      if (quantity > available) quantity = available;
+      quantityInput.value = quantity;
+
+      const price = 1.00;
+      const total = price * quantity;
+      document.getElementById('total').textContent = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
