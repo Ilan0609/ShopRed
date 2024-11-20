@@ -1,0 +1,129 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* En-tête */
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #161b22;
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 36px;
+    color: #5865f2;
+  }
+  .header .stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  .header .stats div {
+    text-align: center;
+  }
+  .header .stats p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .header .stats p:last-child {
+    font-size: 14px;
+    margin: 0;
+    color: #b0b0b0;
+  }
+  
+  /* Section des produits */
+  .products-section {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .products-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #b0b0b0;
+  }
+  .products {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Formulaire de paiement */
+  .purchase-form {
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  
+  .purchase-form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .purchase-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .purchase-form input,
+  .purchase-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #21262d;
+    color: white;
+  }
+  
+  .purchase-form .quantity-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .purchase-form .quantity-selector button {
+    background-color: #5865f2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .purchase-form .quantity-selector button:hover {
+    background-color: #4752c4;
+  }
+  
+  .purchase-form button[type="submit"] {
+    background-color: #5865f2;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .purchase-form button[type="submit"]:hover {
+    background-color: #4752c4;
+  }
+  
